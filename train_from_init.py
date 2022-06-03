@@ -2,8 +2,8 @@ import numpy as np
 import torch
 from torch.backends import cudnn
 cudnn.enabled = True
-from torch.utils.data import DataLoader
-from torchvision import transforms
+# from torch.utils.data import DataLoader
+# from torchvision import transforms
 import argparse
 import torch.nn.functional as F
 import os
@@ -15,10 +15,8 @@ from DPT.DPT import DPTSegmentationModel
 import myTool as mytool
 from myTool import compute_joint_loss, compute_seg_label_3, validation
 from DenseEnergyLoss import DenseEnergyLoss
-import shutil
-# import pamr
+# import shutil
 from pamr import PAMR
-# import random
 import torch.multiprocessing as mp
 import torch.distributed as dist
 
@@ -47,7 +45,7 @@ def main():
     parser.add_argument("--val_list", default="voc12/val(id).txt", type=str)
     parser.add_argument("--LISTpath", default="voc12/train_aug(id).txt", type=str)
     parser.add_argument("--backbone", default="vitb_hybrid", type=str)
-    parser.add_argument("--address", default="8889", type=str)
+    parser.add_argument("--address", default="1234", type=str)
 
     parser.add_argument('--densecrfloss', type=float, default=1e-7,
                         metavar='M', help='densecrf loss (default: 0)')
@@ -257,7 +255,7 @@ def train(gpu, args):
                     'lr: %.4f' % (optimizer.param_groups[0]['lr']), flush=True)
             torch.distributed.barrier()
         
-            # validation
+            # save model
             if (optimizer.global_step-1)%3000 == 0 and gpu ==0:
                 torch.save(model.module.state_dict(), os.path.join('weight', args.session_name + '_{}.pth'.format(optimizer.global_step-1)))
 

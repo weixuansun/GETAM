@@ -2,8 +2,6 @@ import numpy as np
 import torch
 from torch.backends import cudnn
 cudnn.enabled = True
-import imageio
-import importlib
 from tool import imutils
 import argparse
 import cv2
