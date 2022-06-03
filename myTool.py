@@ -567,10 +567,9 @@ def get_data_from_chunk_v3(chunk, args):
         flip_p = np.random.uniform(0, 1)
         img_temp = cv2.imread(os.path.join(img_path, piece + '.jpg'))
         img_temp = cv2.cvtColor(img_temp,cv2.COLOR_BGR2RGB).astype(np.float)
-        saliency_map_path = os.path.join('/home/users/u5876230/swin_sod/pascal/', '{}.png'.format(piece))
+        saliency_map_path = os.path.join(args.saliencypath, '{}.png'.format(piece))
         saliency_map = PIL.Image.open(saliency_map_path)
         saliency_map = np.asarray(saliency_map)
-        # print(saliency_map.shape)
         # img_temp = scale_im(img_temp, scale)
         img_temp, saliency_map = RandomResizeLong2(img_temp, saliency_map, int(dim*0.9), int(dim/0.875))
 
@@ -920,7 +919,6 @@ def get_data_from_chunk_coco(chunk, args):
 
 
     return images, ori_images, labels, croppings, name_list, saliency
-
 
 
 def compute_cos(fts1, fts2):

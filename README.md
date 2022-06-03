@@ -23,8 +23,9 @@ https://arxiv.org/abs/2112.02841
 ## Step3: train and inference
 ### end-to-end training on pascal:
 
-    CUDA_VISIBLE_DEVICES=7 python train_from_init.py --session_name getam_001 -n 1 -g 1 -nr 0 --max_epoches 20  --lr 0.04 --cls_step 0.5 --seg_lr_scale 0.1 --sal_loss True --backbone vitb_hybrid --address 1234
-
+    CUDA_VISIBLE_DEVICES=7 python train_from_init.py --session_name getam_001 -n 1 -g 1 -nr 0 --max_epoches 20  --lr 0.04 --cls_step 0.5 --seg_lr_scale 0.1 --sal_loss True --backbone vitb_hybrid --address 1234 
+    --voc12_root {path to pascal voc dataset} --saliencypath {path to saliency maps}
+    
 ### Inference on pascal
     python test.py --weights {path to weight} --val True --backbone {backbone}
     

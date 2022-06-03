@@ -59,7 +59,8 @@ def main():
     parser.add_argument("--session_name", default="vit_cls_seg", type=str)
     parser.add_argument("--crop_size", default=256, type=int)
     parser.add_argument("--voc12_root", default='/home/users/u5876230/pascal_aug/VOCdevkit/VOC2012/', type=str)
-    parser.add_argument("--IMpath", default="/home/users/u5876230/pascal_aug/VOCdevkit/VOC2012/JPEGImages", type=str)
+    parser.add_argument("--IMpath", default=" ", type=str)
+    parser.add_argument("--saliencypath", default='/home/users/u5876230/swin_sod/pascal/', type=str)
 
     parser.add_argument('-n', '--nodes', default=1,
                         type=int, metavar='N')
@@ -102,6 +103,7 @@ def train(gpu, args):
                                     sigma_xy=args.sigma_xy, scale_factor=args.rloss_scale)
 
     print(vars(args))
+    args.IMpath = args.voc12_root+'JPEGImages'
 
     batch_size = args.batch_size
     img_list = mytool.read_file(args.LISTpath)
@@ -129,7 +131,7 @@ def train(gpu, args):
     for iter in range(max_step+1):
         chunk = data_gen.__next__()
         img_list = chunk
-        if (optimizer.global_step-1) > args.cls_step * max_step:
+        if (optimizer.global_step-1) < args.cls_step * max_step:
             img, ori_images, label, croppings, name_list = mytool.get_data_from_chunk_v2(chunk, args)
             img = img.cuda(non_blocking=True)
             label = label.cuda(non_blocking=True)
