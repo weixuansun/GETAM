@@ -32,9 +32,9 @@ https://arxiv.org/abs/2112.02841
   | Dataset         | Backbone | mIoU(val) | mIoU(test) |Checkpoint           |
   | --------------- | ------ | -----------  |----|---                 |
   | PASCAL VOC 2012 | Vit_hybrid   | 71.7  |  72.3   | [Download](https://drive.google.com/file/d/1gOtbWFpi2OTn7NPIPOomnn6cfELgVVVA/view?usp=sharing)      | 
-  | PASCAL VOC 2012 | Vit   | 68.1       | 68.8 |[Download]      |
-  | PASCAL VOC 2012 | deit   |66.0       | 68.9 |[Download]      |
-  | PASCAL VOC 2012 | deit_distilled   | 70.7  | 71.1    | [Download]      |
+  | PASCAL VOC 2012 | Vit   | 68.1       | 68.8 |[Download](https://drive.google.com/file/d/16jMDJTdiXnpax0uhNMgwgPLU6INAcGA4/view?usp=sharing)      |
+  | PASCAL VOC 2012 | deit   |66.0       | 68.9 |[Download](https://drive.google.com/file/d/1XS1YnIjB64EMGPUMOWAl9f1OqIxgVw2Y/view?usp=sharing)      |
+  | PASCAL VOC 2012 | deit_distilled   | 70.7  | 71.1    | [Download](https://drive.google.com/file/d/1pFs0ZSAoIwxa1K4P5xxNJSK1-g_5MwkH/view?usp=sharing)      |
   
   
   
