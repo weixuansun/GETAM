@@ -12,7 +12,7 @@ https://arxiv.org/abs/2112.02841
 ## Step2: dataset preparation
 ### pascal voc
 - [Images](http://host.robots.ox.ac.uk/pascal/VOC/voc2012/) 
-- saliency map: 
+- [saliency map](https://1drv.ms/u/s!Ak3sXyXVg781yW78vNuDTblg2qdJ)
 
 
 
