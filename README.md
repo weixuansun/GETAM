@@ -4,6 +4,12 @@ implementation for 'GETAM: Gradient-weighted Element-wise Transformer Attention 
 
 https://arxiv.org/abs/2112.02841
 
+<img width="900" alt="image" src="https://user-images.githubusercontent.com/13931546/171977086-f043617e-422c-4a26-aa26-6904cf0416e7.png">
+
+<img width="300" alt="image" src="https://user-images.githubusercontent.com/13931546/171977077-7fd509b3-a008-492c-aa51-88200bcd8b49.png">
+
+
+
 ## Step1: environment
 - create a new environment pytohn=3.6
 - install requirements.txt
