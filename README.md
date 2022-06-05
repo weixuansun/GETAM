@@ -14,6 +14,14 @@ https://arxiv.org/abs/2112.02841
 - create a new environment pytohn=3.6
 - install requirements.txt
 
+### optional: build python extension module for DenseEnergyLoss:
+```
+cd wrapper/bilateralfilter
+swig -python -c++ bilateralfilter.i
+python setup.py install
+```
+More details please see [here](https://github.com/meng-tang/rloss/tree/master/pytorch)
+
 
 ## Step2: dataset preparation
 ### pascal voc
@@ -52,3 +60,4 @@ coming soon
   ## Acknowledgement
   - Thanks for the saliency object detection code provided by [UCNet](https://github.com/JingZhang617/UCNet)
   - Thanks for codebase provided by [DPT](https://github.com/isl-org/DPT)
+  - Thanks for codebase provided by [RRM](https://github.com/zbf1991/RRM)
