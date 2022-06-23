@@ -61,3 +61,15 @@ coming soon
   - Thanks for the saliency object detection code provided by [UCNet](https://github.com/JingZhang617/UCNet)
   - Thanks for codebase provided by [DPT](https://github.com/isl-org/DPT)
   - Thanks for codebase provided by [RRM](https://github.com/zbf1991/RRM)
+
+---
+if you use this paper, please kindly cite:
+```
+@article{sun2021getam,
+  title={GETAM: Gradient-weighted Element-wise Transformer Attention Map for Weakly-supervised Semantic segmentation},
+  author={Sun, Weixuan and Zhang, Jing and Liu, Zheyuan and Zhong, Yiran and Barnes, Nick},
+  journal={arXiv preprint arXiv:2112.02841},
+  year={2021}
+}
+```
+
