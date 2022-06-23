@@ -11,6 +11,7 @@ https://arxiv.org/abs/2112.02841
 
 
 ## Step1: environment
+- clone this repo 
 - create a new environment pytohn=3.6
 - install requirements.txt
 
