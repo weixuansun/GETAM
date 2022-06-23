@@ -12,13 +12,17 @@ https://arxiv.org/abs/2112.02841
 
 ## Step1: environment
 - clone this repo 
-- create a new environment pytohn=3.6
+```
+git clone https://github.com/weixuansun/GETAM.git
+```
+- optionally create a new environment python>=3.6
 - install requirements.txt
-
+```
+pip install -r requirements.txt
+```
 ### optional: build python extension module for DenseEnergyLoss:
 ```
 cd wrapper/bilateralfilter
-swig -python -c++ bilateralfilter.i
 python setup.py install
 ```
 More details please see [here](https://github.com/meng-tang/rloss/tree/master/pytorch)
